@@ -37,3 +37,13 @@ export const searchMoviesDetails = async (movieId, signal) => {
   });
   return response.data;
 };
+
+export const searchMovieCast = async (movieId, signal) => {
+  const response = await axios.get(`movie/${movieId}/credits`, {
+    params: {
+      api_key: API_KEY,
+    },
+    signal,
+  });
+  return response.data.cast;
+};
