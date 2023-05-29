@@ -15,7 +15,6 @@ export const useRequest = (httpRequestFunction, param) => {
       try {
         setData(await httpRequestFunction(param, controller.signal));
       } catch (e) {
-        // console.log(e.message === 'canceled' && e.config.signal.aborted);
         if (e.code === 'ERR_CANCELED') return;
         setError('Sorry, something went wrong. Please try again later.');
       } finally {
