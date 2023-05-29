@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { HeaderLayout, Layout, Link } from './Header.styled';
 import { Outlet } from 'react-router-dom';
+import { Loader } from 'components/Loader/Loader';
 
 export const Header = () => {
   return (
@@ -13,7 +14,7 @@ export const Header = () => {
           <Link to="/movies">Movies</Link>
         </nav>
       </HeaderLayout>
-      <Suspense fallback={'Loader'}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </Layout>
