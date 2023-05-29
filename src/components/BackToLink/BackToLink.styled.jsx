@@ -11,6 +11,8 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
   text-transform: uppercase;
 
+  transition: color 250ms linear;
+
   :hover {
     color: orange;
   }

@@ -14,9 +14,6 @@ export const FilmImage = styled.img`
 `;
 
 export const FilmInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   width: 1000px;
   padding: 8px 4px;
 `;

@@ -10,6 +10,8 @@ export const HeaderLayout = styled.header`
   padding: 4px;
   margin-bottom: 4px;
   box-shadow: 1px 2px 9px 0px rgb(0 0 0 / 55%);
+  font-size: 20px;
+  font-weight: 700;
 
   > nav {
     display: flex;

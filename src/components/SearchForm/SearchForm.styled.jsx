@@ -21,6 +21,9 @@ export const FormButton = styled.button`
   border: 1px solid;
   border-radius: 4px;
   font-size: 16px;
+
+  transition: background-color 250ms linear, color 250ms linear;
+
   :hover {
     background-color: #ffa500;
     color: #fff;
