@@ -47,3 +47,13 @@ export const searchMovieCast = async (movieId, signal) => {
   });
   return response.data.cast;
 };
+
+export const searchMovieReviews = async (movieId, signal) => {
+  const response = await axios.get(`movie/${movieId}/reviews`, {
+    params: {
+      api_key: API_KEY,
+    },
+    signal,
+  });
+  return response.data.results;
+};

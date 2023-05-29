@@ -4,6 +4,7 @@ import MovieDetails from 'pages/MovieDetailsPage/MovieDetailsPage';
 import MoviesPage from 'pages/MoviesPage/MoviesPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import MovieCast from './MovieCast/MovieCast';
+import MovieReviews from './MovieReviews/MovieReviews';
 
 export const App = () => {
   return (
@@ -13,7 +14,7 @@ export const App = () => {
         <Route path="movies" element={<MoviesPage />} />
         <Route path="movies/:movieId" element={<MovieDetails />}>
           <Route path="cast" element={<MovieCast />} />
-          <Route path="reviews" element={<p>One Movie Review</p>} />
+          <Route path="reviews" element={<MovieReviews />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
