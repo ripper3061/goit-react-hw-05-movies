@@ -6,6 +6,7 @@ import { Loader } from 'components/Loader/Loader';
 import { useRequest } from 'hooks/useRequest';
 import { searchMoviesDetails } from 'services/api';
 import { BackToLink } from 'components/BackToLink/BackToLink';
+import { AditionalMovieNav } from 'components/AditionalMovieNav/AditionalMovieNav';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -22,6 +23,7 @@ const MovieDetails = () => {
         <Layout>
           <BackToLink to={backToLinkHref}>Go back</BackToLink>
           <MovieInfo movie={movie} />
+          <AditionalMovieNav />
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
